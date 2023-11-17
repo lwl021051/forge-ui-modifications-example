@@ -1,0 +1,37 @@
+{
+    "name": "ui-modifications-app",
+    "version": "0.2.0",
+    "private": true,
+    "homepage": ".",
+    "dependencies": {
+        "@forge/bridge": "2.6.0",
+        "@forge/jira-bridge": "0.21.0"
+    },
+    "devDependencies": {
+        "@parcel/resolver-default": "^2.9.3",
+        "cross-env": "7.0.3",
+        "parcel": "2.9.3",
+        "rimraf": "5.0.1"
+    },
+    "scripts": {
+        "start": "parcel public/index.html",
+        "build": "rimraf dist && cross-env PARCEL_WORKERS=0 parcel build public/index.html --no-cache"
+    },
+    "targets": {
+        "default": {
+            "publicUrl": "./"
+        }
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
